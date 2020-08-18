@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wincalx-web-ishida
+spec:
+  selector:
+    matchLabels:
+      app: wincalx-web-ishida
+      tier: frontend
+      company: ishida-inn
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wincalx-web-ishida
+        tier: frontend
+        company: ishida-inn
+    spec:
+      containers:
+        - name: wincalx-web-ishida
+          image: REPLACED_WITH_DOCKER_IMAGE_NAME
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+            - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: wincalx-web-ishida
+spec:
+  type: NodePort
+  selector:
+    app: wincalx-web-ishida
+    tier: frontend
+    company: ishida-inn
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 80
