@@ -5,10 +5,9 @@
     "prettier",
     "plugin:eslint-comments/recommended",
     // "plugin:jest/recommended",
-    "prettier/react",
-    "plugin:flowtype/recommended"
+    "prettier/react"
   ],
-  "plugins": ["eslint-comments", "jest", "unicorn", "react-hooks", "flowtype"],
+  "plugins": ["eslint-comments", "jest", "unicorn", "react-hooks"],
   "env": {
     "browser": true,
     "node": true,
