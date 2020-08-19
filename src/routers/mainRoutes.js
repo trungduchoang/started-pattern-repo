@@ -1,6 +1,7 @@
 // components
 import NotFound from "@/pages/NotFound";
 import Home from "@/pages/Home";
+import Sample from "@/pages/Sample";
 // others
 import CONSTANTS from "@/constants";
 
@@ -13,6 +14,12 @@ const mainRoutes = [
     pageName: CONSTANTS.PAGE_NAME.HOME,
     exact: true,
     component: Home
+  },
+  {
+    path: CONSTANTS.ROUTERS.SAMPLE,
+    pageName: CONSTANTS.PAGE_NAME.SAMPLE,
+    exact: true,
+    component: Sample
   }
 ];
 

@@ -23,7 +23,7 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return (
         <div className="error-boundary-wrapper">
-          <a href="/">Back To Home</a>
+          <a href="/">Error! Click To Back To Home!</a>
         </div>
       );
     }

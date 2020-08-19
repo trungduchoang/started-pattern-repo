@@ -2,7 +2,8 @@ import ROUTERS from "./routers";
 
 const CONSTANTS = {
   PAGE_NAME: {
-    HOME: "Home"
+    HOME: "Home",
+    SAMPLE: "Sample Page"
   },
   HTTPS_REQUEST: {
     METHOD: {
