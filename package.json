@@ -7,7 +7,6 @@
     "antd": "^3.26.3",
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
-    "cross-env": "^6.0.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.3",
@@ -32,8 +31,7 @@
     "react-test-renderer": "^16.12.0",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "sockjs-client": "^1.4.0",
-    "stylelint": "^12.0.0"
+    "sockjs-client": "^1.4.0"
   },
   "scripts": {
     "start": "cross-env REACT_APP_CLIENT_ENV=development craco start",
@@ -44,10 +42,13 @@
     "build:production": "cross-env REACT_APP_CLIENT_ENV=production craco build",
     "test": "cross-env REACT_APP_CLIENT_ENV=test craco test",
     "flow": "flow",
-    "lint": "npm run lint:js && npm run lint:style && npm run prettier",
+    "lint": "npm run lint:js && npm run lint:style",
     "lint:js": "eslint --cache --fix --ext .js,.jsx ./src",
     "lint:style": "stylelint --fix \"src/**/*.scss\" --syntax scss",
-    "prettier": "prettier -c --write \"**/src/**\"",
+    "prettier": "prettier -c \"**/src/**\" --write",
+    "lint-staged:js": "eslint --cache --fix --ext .js,.jsx",
+    "lint-staged:style": "stylelint --fix --syntax scss",
+    "lint-staged:prettier": "prettier -c --write",
     "ci:dev": "npm set progress=false && npm install && npm run build:dev",
     "ci:staging": "npm set progress=false && npm install && npm run build:staging",
     "ci:production": "npm set progress=false && npm install && npm run build:production"
@@ -59,15 +60,15 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,scss,md,json}": [
-      "npm run prettier",
+      "npm run lint-staged:prettier",
       "git add"
     ],
     "**/*.{js,jsx}": [
-      "npm run lint:js",
+      "npm run lint-staged:js",
       "git add"
     ],
     "**/*.scss": [
-      "npm run lint:style",
+      "npm run lint-staged:style",
       "git add"
     ]
   },
@@ -116,6 +117,8 @@
     "stylelint-config-standard": "^19.0.0",
     "stylelint-prettier": "^1.1.2",
     "webpack-bundle-analyzer": "^3.6.0",
-    "webpackbar": "^4.0.0"
+    "webpackbar": "^4.0.0",
+    "stylelint": "^12.0.0",
+    "cross-env": "^6.0.3"
   }
 }
