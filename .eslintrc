@@ -23,7 +23,7 @@
     "react/jsx-one-expression-per-line": 0,
     "generator-star-spacing": 0,
     "function-paren-newline": 0,
-    "import/no-unresolved": [2, { "ignore": ["^@/", "^umi/", "environments"] }],
+    "import/no-unresolved": [2, { "ignore": ["^@/", "environments"] }],
     "import/no-extraneous-dependencies": [
       2,
       {
