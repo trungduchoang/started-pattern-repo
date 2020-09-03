@@ -1,6 +1,8 @@
 const ROUTERS = {
   HOME: "/",
-  SAMPLE: "/sample"
+  ASSIGNREQUEST: "/assignrequest",
+  SAMPLE: "/sample",
+  VIEWREQUEST : "/viewrequest/:id"
 };
 
 export default ROUTERS;

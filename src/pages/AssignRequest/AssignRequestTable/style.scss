@@ -1,0 +1,15 @@
+.assign-request-wrapper {
+  .assign-request-table-wrapper{
+    border-radius: 3px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    border: 1px solid rgba(0,0,0,.0625)!important;
+    padding: 20px 30px 60px 30px;
+    background-color: #fff;
+    .ant-table-pagination.ant-pagination{
+      margin-top: 0px !important;
+    }
+  }
+  .ant-select{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  }
+}
