@@ -3,9 +3,7 @@ import ROUTERS from "./routers";
 const CONSTANTS = {
   PAGE_NAME: {
     HOME: "Home",
-    ASSIGNREQUEST: "My request",
     SAMPLE: "Sample Page",
-    VIEWREQUEST: "View request",
   },
   HTTPS_REQUEST: {
     METHOD: {
@@ -16,8 +14,9 @@ const CONSTANTS = {
   ROUTERS,
   RADIX: {
     DECIMA: 10,
-    HEX: 16,
+    HEXA: 16,
     OCTA: 8,
+    BINARY: 2,
   },
 };
 

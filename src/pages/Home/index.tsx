@@ -1,10 +1,9 @@
 // libs
 import React from "react";
-// component
-import Staff from "./Staff";
+import { Link } from "react-router-dom";
 // others
 import "./style.scss";
 
-const Home: React.FC = () => <Staff />;
+const Home = () => <Link to="/sample">Go to Sample</Link>;
 
 export default Home;
