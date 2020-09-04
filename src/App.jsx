@@ -5,13 +5,14 @@ import { ConfigProvider } from "antd";
 // components import
 import ProcessingLoader from "@/components/ProcessingLoader";
 import ErrorBoundary from "@/pages/ErrorBoundary";
+import Layout from "@/components/Layout";
 // routers
 import { appRoutes } from "@/routers/appRoutes";
 // others
 import "antd/dist/antd.css";
 
 // generate app routes
-const routeComponents = appRoutes.map(route => (
+const routeComponents = appRoutes.map((route) => (
   <Route
     key={route.path || "/appNotFound"}
     path={route.path}
@@ -25,7 +26,9 @@ const App = () => (
     <ErrorBoundary>
       <BrowserRouter>
         <Suspense fallback={<ProcessingLoader message="Suspense fallback" />}>
-          <Switch>{routeComponents}</Switch>
+          <Layout>
+            <Switch>{routeComponents}</Switch>
+          </Layout>
         </Suspense>
       </BrowserRouter>
     </ErrorBoundary>

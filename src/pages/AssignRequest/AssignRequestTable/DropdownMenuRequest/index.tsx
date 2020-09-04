@@ -48,7 +48,7 @@ const DropdownMenuRequest = () => {
           </Button>
         </Menu.Item>
         <Menu.Item>
-          <Button style={{ width: 70 }} size="small" type="danger">
+          <Button style={{ width: 70 }} size="small" danger>
             Decline
           </Button>
         </Menu.Item>
