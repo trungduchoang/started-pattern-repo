@@ -14,6 +14,11 @@ const CONSTANTS = {
   },
   EMPTY_VALUE: " ",
   ROUTERS,
+  RADIX: {
+    DECIMA: 10,
+    HEX: 16,
+    OCTA: 8,
+  },
 };
 
 export default CONSTANTS;

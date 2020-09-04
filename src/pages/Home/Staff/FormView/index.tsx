@@ -3,6 +3,7 @@ import { DatePicker, Input, Select, Form, Button } from "antd";
 import React, { useState } from "react";
 // others
 import "./style.scss";
+import CONSTANTS from "src/constants";
 
 const { Option } = Select;
 const { TextArea } = Input;
@@ -73,7 +74,9 @@ const FormView: React.FC = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        {renderForm(totalRequest[parseInt(typeRequest, 10) - 1])}
+        {renderForm(
+          totalRequest[parseInt(typeRequest, CONSTANTS.RADIX.DECIMA) - 1]
+        )}
         <Form.Item>
           <Button type="primary" htmlType="submit">
             Submit
