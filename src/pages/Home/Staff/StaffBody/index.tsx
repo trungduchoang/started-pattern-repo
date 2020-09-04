@@ -201,7 +201,7 @@ const StaffBody: React.FC = () => {
       key: "12",
       id: "12",
       code: "ABC-XYZ-2020",
-      title: "New York No. 1 Lake Park",
+      title: "New York No. 3 Lake Park",
       userApplicant: "baotien.ho",
       submitDate: moment("10-25-2019").format("L"),
       status: "Pending",
