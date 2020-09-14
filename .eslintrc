@@ -1,88 +1,85 @@
 {
-  "parser": "babel-eslint",
   "extends": [
     "airbnb",
-    "prettier",
-    "plugin:eslint-comments/recommended",
-    // "plugin:jest/recommended",
-    "prettier/react"
+    "plugin:@typescript-eslint/recommended"
   ],
+  "parser": "@typescript-eslint/parser",
   "plugins": [
-    "eslint-comments",
-    "jest",
-    "unicorn",
+    "@typescript-eslint",
+    "prettier",
     "react-hooks"
-    // "@typescript-eslint"
   ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true,
-    "mocha": true,
-    "jest": true,
-    "jasmine": true
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
   },
   "rules": {
-    "react/jsx-wrap-multilines": 0,
-    "react/prop-types": 0,
-    "react/forbid-prop-types": 0,
-    "react/jsx-one-expression-per-line": 0,
-    "generator-star-spacing": 0,
-    "function-paren-newline": 0,
-    "import/no-unresolved": [
+    "react/jsx-filename-extension": [
       2,
       {
-        "ignore": [
-          "^@/"
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
         ]
       }
     ],
     "import/no-extraneous-dependencies": [
       2,
       {
-        "optionalDependencies": true,
         "devDependencies": [
-          "**/tests/**.js",
-          "/mock/**/**.js",
-          "**/**.test.js",
-          "**/_mock.{ts,js}",
-          "**/craco.config.js"
+          "**/craco.config.js",
+          "**/test.tsx",
+          "**/test.ts"
         ]
       }
     ],
+    "@typescript-eslint/indent": [
+      2,
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    // ESLint-TS Issue: https://github.com/typescript-eslint/typescript-eslint/issues/2502
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      1
+    ],
+    "react/jsx-wrap-multilines": 0,
+    "react/prop-types": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "generator-star-spacing": 0,
+    "function-paren-newline": 0,
+    // Fix css, scss import
+    "import/no-unresolved": "off",
     "jsx-a11y/no-noninteractive-element-interactions": 0,
     "jsx-a11y/click-events-have-key-events": 0,
     "jsx-a11y/no-static-element-interactions": 0,
     "jsx-a11y/anchor-is-valid": 0,
-    "linebreak-style": 0,
-    // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins
     "no-prototype-builtins": "off",
     "import/prefer-default-export": "off",
     "import/no-default-export": [
       0,
       "camel-case"
     ],
-    // Too restrictive: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
     "react/destructuring-assignment": "off",
-    "react/jsx-filename-extension": "off",
-    // Use function hoisting to improve code readability
-    "no-use-before-define": [
-      "error",
-      {
-        "functions": false,
-        "classes": true,
-        "variables": true
-      }
-    ],
-    // Common abbreviations are known and readable
     "unicorn/prevent-abbreviations": "off",
     "import/no-cycle": 0,
-    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-    // TODO: BE CAREFUL OF THIS RULE: This ↓ will turn off Adding dependencies automatically
+    "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/self-closing-comp": "off",
     "react/jsx-props-no-spreading": 0,
-    // Conflict with prettier
     "arrow-body-style": [
       "error",
       "as-needed"
@@ -103,16 +100,12 @@
     "no-unused-vars": "warn",
     "no-underscore-dangle": 0,
     "no-shadow": "off",
-    "import/extensions": [
-      "error",
-      "never"
-    ],
+    "import/extensions": "off",
     "import/order": 0,
-    "eslint-comments/no-unlimited-disable": "off"
-  },
-  "settings": {
-    "import/resolver": {
-      "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
-    }
+    "no-alert": "error",
+    "eslint-comments/no-unlimited-disable": "off",
+    "comma-dangle": "off",
+    // For variables like window, Blob, ...
+    "no-undef": "off"
   }
 }
