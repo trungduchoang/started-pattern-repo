@@ -1,0 +1,13 @@
+.content-step-view-request {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  p {
+    margin-right: 20px;
+    font-weight: bold;
+  }
+  .ant-steps-item-content {
+    margin-left: 13px;
+  }
+}

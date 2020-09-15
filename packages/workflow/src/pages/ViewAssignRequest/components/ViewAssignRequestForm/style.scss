@@ -1,0 +1,17 @@
+.view-assign-request-wrapper .view-assign-request-form-wrapper {
+  display: flex;
+  justify-content: center;
+  // TODO: Better CSS for Responsive
+  .request-form {
+    width: 80%;
+  }
+  .item-align-right {
+    text-align: right;
+  }
+  .ant-input[disabled] {
+    color: #4a4a4a;
+  }
+  .ant-picker-input > input[disabled] {
+    color: #4a4a4a;
+  }
+}

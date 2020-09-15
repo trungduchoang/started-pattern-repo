@@ -1,0 +1,23 @@
+.StaffBody {
+  background-color: #ffffff;
+  padding: 30px 30px 40px 30px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.0625) !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  // margin-bottom: 20px;
+  // margin-top: 20px;
+  .ant-table-content {
+    overflow-x: auto;
+    // ::-webkit-scrollbar{
+    //   width: 5px;
+    // }
+    table {
+      min-width: 800px;
+      height: auto;
+    }
+  }
+  .ant-table-pagination.ant-pagination {
+    margin: 0px;
+    margin-top: 30px;
+  }
+}

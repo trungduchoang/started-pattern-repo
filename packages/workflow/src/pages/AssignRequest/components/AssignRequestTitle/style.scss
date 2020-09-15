@@ -1,0 +1,33 @@
+.assign-request-wrapper .assign-request-title-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 0px;
+    margin-left: 10px;
+    // &:after {
+    //   display: block;
+    //   content: "";
+    //   border-bottom: solid 2px #333;
+    //   transform: scaleX(0);
+    //   transition: transform 250ms ease-in-out;
+    //   transform-origin: 0% 50%;
+    // }
+    // &:hover:after {
+    //   transform: scaleX(1);
+    // }
+  }
+  .assign-request-icon {
+    font-size: 15px;
+    color: #ff5722;
+    padding: 10px;
+    border: 1px solid #ff5722;
+    border-radius: 50%;
+  }
+}

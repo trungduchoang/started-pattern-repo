@@ -1,0 +1,72 @@
+.right-header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 25px;
+  .back-to-hrsol-wrapper {
+    margin-right: 15px;
+    width: auto;
+    background-color: #fff;
+    border: 1px solid #1890ff;
+    color: #2196f3;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.2s;
+    font-weight: 400;
+  }
+  .back-to-hrsol-wrapper:hover {
+    color: #fff;
+    background-color: #1890ff;
+  }
+  .right-header-notification-wrapper {
+    margin-right: 20px;
+    display: inherit;
+    .bell-i {
+      font-size: 20px;
+      border-radius: 50%;
+      color: #333 !important;
+      animation: example infinite;
+      animation-duration: 2s;
+      @keyframes example {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1.15);
+        }
+        75% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  .right-header-username-wrapper {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: #fafafa;
+    }
+    .right-header-avatar-username-wrapper {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 5px;
+      display: flex;
+      img {
+        width: 30px;
+        max-width: 30px;
+      }
+    }
+  }
+}

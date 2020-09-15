@@ -1,0 +1,14 @@
+// No Css
+.view-request-wrapper {
+  .view-request-form-wrapper {
+    .item-align-right {
+      text-align: right;
+    }
+    .ant-input[disabled] {
+      color: #4a4a4a;
+    }
+    .ant-picker-input > input[disabled] {
+      color: #4a4a4a;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.request-filter-wrapper {
+  display: flex;
+  margin-bottom: 25px;
+
+  @media screen and(max-width: 800px) {
+    margin-bottom: 20px;
+  }
+  &-title {
+    margin-left: 15px;
+    margin-right: 7px;
+
+    @media screen and(max-width: 800px) {
+      margin: 0 8px 0 4px;
+    }
+  }
+  .request-type-wrapper {
+    .ant-select {
+      @media screen and(max-width: 800px) {
+        width: auto !important;
+      }
+    }
+  }
+  .control-select-all-status-wrapper {
+    .ant-select {
+      @media screen and(max-width: 800px) {
+        width: auto !important;
+      }
+    }
+  }
+  .control-select-all-datetime-wrapper {
+    .ant-select {
+      @media screen and(max-width: 800px) {
+        // width: auto !important;
+      }
+    }
+  }
+}

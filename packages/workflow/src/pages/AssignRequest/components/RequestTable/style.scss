@@ -1,0 +1,28 @@
+.assign-request-wrapper {
+  .request-table-wrapper {
+    // width: 1200px;
+    margin: 0px auto;
+    border-radius: 3px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    border: 1px solid rgba(0, 0, 0, 0.0625) !important;
+    padding: 30px 30px 40px 30px;
+    background-color: #fff;
+    .ant-table-pagination.ant-pagination {
+      margin-top: 0px !important;
+    }
+    .ant-table-content {
+      overflow-x: auto;
+      table {
+        min-width: 1000px;
+        height: auto;
+        margin-bottom: 25px;
+      }
+    }
+    .ant-table-wrapper {
+      margin: 0px auto;
+    }
+  }
+  .ant-select {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  }
+}
