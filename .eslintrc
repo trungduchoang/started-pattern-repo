@@ -35,6 +35,8 @@
         ]
       }
     ],
+    "import/extensions": 0,
+    "react/react-in-jsx-scope": 0,
     "max-len": 0,
     "react-hooks/exhaustive-deps": 0,
     "import/no-extraneous-dependencies": 0,
@@ -99,8 +101,6 @@
     "import/no-dynamic-require": 0,
     "no-underscore-dangle": 0,
     "no-shadow": 0,
-    "import/extensions": 0,
-    "import/order": 0,
     "no-alert": 2,
     "eslint-comments/no-unlimited-disable": 0,
     "comma-dangle": 0,
@@ -109,8 +109,6 @@
     "no-confusing-arrow": 0,
     "newline-before-return": 1,
     "jsx-a11y/label-has-associated-control": 0,
-    "react/no-array-index-key": 0,
-    // ESLint-TS Issue: https://github.com/typescript-eslint/typescript-eslint/issues/2502
-    "no-use-before-define": 0
+    "react/no-array-index-key": 0
   }
 }
