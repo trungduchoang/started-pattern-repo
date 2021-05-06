@@ -1,20 +1,9 @@
 {
-  "Quick component creation": {
-    "prefix": "qcc",
+  "Example": {
+    "prefix": "example",
     "body": [
-      "// libs import",
-      "import React from 'react';",
-      "// others",
-      "import './style.scss';",
-      "",
-      "/**",
-      " * ${1:Component} - $0",
-      " */",
-      "const ${1:Component} = () => <div>${1:Component}</div>;",
-      "",
-      "export default ${1:Component};",
-      ""
+      "// Example"
     ],
-    "description": "Quick component creation"
+    "description": "Example"
   }
 }
