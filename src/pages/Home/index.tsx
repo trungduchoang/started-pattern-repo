@@ -1,8 +1,16 @@
 // libs
-import { Link } from "react-router-dom";
+import { useState } from "react";
 // others
 import "./style.scss";
 
-const Home = () => <Link to="/sample">Go to Sample</Link>;
+const Home = () => {
+  const [i, setI] = useState(0);
+
+  return (
+    <button type="button" onClick={() => setI((i) => i + 1)}>
+      Count now: {i}
+    </button>
+  );
+};
 
 export default Home;
