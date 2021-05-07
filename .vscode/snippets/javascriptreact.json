@@ -1,0 +1,9 @@
+{
+  "Example": {
+    "prefix": "example",
+    "body": [
+      "// Example"
+    ],
+    "description": "Example"
+  }
+}
