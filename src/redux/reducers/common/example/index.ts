@@ -1,4 +1,4 @@
-import { TYPES } from "src/redux/actionTypes/common";
+import { TYPES } from "@/redux/actionTypes/common";
 
 type TREDUCER = {};
 

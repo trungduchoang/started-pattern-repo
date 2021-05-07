@@ -1,5 +1,4 @@
 // libs
-import React from "react";
 import { Link } from "react-router-dom";
 // others
 import "./style.scss";

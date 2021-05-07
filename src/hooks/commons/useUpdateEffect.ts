@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 
 /**
  * useUpdateEffect
- * @description Trigger Effect but ignore first Mount
+ * @description Trigger Effect like useEffect but ignore first Mount
  * @param effect
  * @param deps
  */

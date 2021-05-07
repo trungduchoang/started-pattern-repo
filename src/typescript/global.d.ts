@@ -47,7 +47,7 @@ type SET_STATE<T> = React.Dispatch<React.SetStateAction<T>>;
 /**
  * onClick Event
  */
-type ONCLICK<T = HTMLElement> = React.MouseEventHandler<T, MouseEvent>;
+type ONCLICK<T = HTMLElement> = React.MouseEventHandler<T>;
 
 /**
  * onChange Event

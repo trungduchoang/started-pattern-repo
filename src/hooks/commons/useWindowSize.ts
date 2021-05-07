@@ -8,27 +8,12 @@ type WindowSize = {
 };
 /**
  * useWindowSize
+ * @returns { width: number | 0, height: number | 0 }
  * @description Retrieve window dimensions onResize
  * @see https://usehooks-typescript.com/react-hook/use-window-size
  */
 export function useWindowSize(): WindowSize {
-  const getWindowSize = () => {
-    if (typeof window !== "undefined") {
-      return {
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    }
-
-    return {
-      width: 0,
-      height: 0,
-    };
-  };
-
-  const [windowSize, setWindowSize] = useState<WindowSize | undefined>(
-    getWindowSize()
-  );
+  const [windowSize, setWindowSize] = useState<WindowSize>(getWindowSize());
 
   const { run: updateWindowSize } = useDebounceFn({
     fn: () => {
@@ -44,10 +29,23 @@ export function useWindowSize(): WindowSize {
     };
   }, []);
 
-  return (
-    windowSize || {
-      width: 0,
-      height: 0,
-    }
-  );
+  return windowSize;
+}
+
+/**
+ * getWindowSize
+ * @returns { width: number | 0, height: number | 0 }
+ */
+function getWindowSize() {
+  if (typeof window !== "undefined") {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+
+  return {
+    width: 0,
+    height: 0,
+  };
 }

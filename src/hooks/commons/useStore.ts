@@ -1,7 +1,7 @@
 // libs
 import { useSelector } from "react-redux";
 // types
-import { SELECTOR, USE_STORE } from "@/types/common";
+import { SELECTOR, USE_STORE } from "@/typescript/common";
 
 const useTypedSelector: SELECTOR = useSelector;
 
